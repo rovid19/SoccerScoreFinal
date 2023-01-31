@@ -11,15 +11,15 @@ const LiveGamesDetails = ({ openClose, data, name, object }) => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
-        className="w-[80%] h-[70%] bg-white border-8 border-black-400 lg:w-[50%]"
+        className="w-[80%] h-[70%] relative bg-white border-8 border-black-400 lg:w-[50%]"
       >
         <button
           onClick={openClose}
-          className="bg-yellow w-[50px] h-[5%] hover:bg-red hover:w-[100px] hover:text-white transition-all"
+          className="bg-yellow w-full absolute bottom-0 h-[10%] hover:bg-red hover:w-[100px] hover:text-white transition-all lg:top-0 lg:left-0 lg:w-[50px] lg:h-[5%] "
         >
           Close
         </button>
-        <div className="flex justify-center h-[5%] text-2xl  mb-4">
+        <div className="flex justify-center mt-10 h-[5%] text-2xl  mb-4">
           <h1>{object.tournament.name}</h1>
         </div>
         <div className="w-full h-[30%] bg-yellow  grid grid-cols-2 pt-6 rounded-xl shadow-xl">
