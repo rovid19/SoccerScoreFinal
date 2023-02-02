@@ -70,7 +70,7 @@ const Leagues = ({ handleUpdate, data }) => {
         style={styles}
       ></div>
 
-      <div className="w-full h-full">
+      <div className="w-[100%] h-[100%]">
         <motion.ul
           initial={{ x: 1000, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -91,32 +91,36 @@ const Leagues = ({ handleUpdate, data }) => {
               <img
                 src={Img1}
                 onClick={() => handleUpdate(title1)}
-                className="w-[80%]"
+                className="w-[80%] group"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/laliga">
-            <li className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title2)}
+              className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title2)}
               >
                 Spanish LaLiga
               </h1>
               <img
                 src={Img2}
                 onClick={(event) => handleUpdate(title2)}
-                className="w-[80%]"
+                className="w-[80%] group"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/bundesliga">
-            <li className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title3)}
+              className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title3)}
               >
                 Austrian Bundesliga
               </h1>
@@ -125,14 +129,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title3)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/seriea">
-            <li className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title4)}
+              className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title4)}
               >
                 Italian Serie A
               </h1>
@@ -141,14 +147,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title4)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/ligue1">
-            <li className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title5)}
+              className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title5)}
               >
                 France Ligue 1
               </h1>
@@ -157,15 +165,17 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title5)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
 
           <Link to="/leagues/russianpremier">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title6)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title6)}
               >
                 Russian Premier Liga
               </h1>
@@ -174,14 +184,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title6)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/primeira">
-            <li className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title7)}
+              className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title7)}
               >
                 Liga Portugal
               </h1>
@@ -190,14 +202,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title7)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/eredivisie">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title8)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title8)}
               >
                 Netherlands Eredivise
               </h1>
@@ -206,14 +220,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title8)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/jupilerproleague">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title9)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title9)}
               >
                 Belgian Pro League
               </h1>
@@ -222,14 +238,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title9)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/brasileirao">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title10)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title10)}
               >
                 Brazilian Serie A
               </h1>
@@ -238,15 +256,17 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title10)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
 
           <Link to="/">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title11)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title11)}
               >
                 American Major League Soccer
               </h1>
@@ -255,14 +275,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title11)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title12)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title12)}
               >
                 Mexican Liga MX
               </h1>
@@ -271,14 +293,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title12)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/spfl">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title13)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title13)}
               >
                 Scottish First League
               </h1>
@@ -287,14 +311,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title13)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/secondbundesliga">
-            <li className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title14)}
+              className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title14)}
               >
                 2. Bundesliga
               </h1>
@@ -303,14 +329,16 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title14)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
           <Link to="/leagues/prvaliga">
-            <li className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer">
+            <div
+              onClick={(event) => handleUpdate(title15)}
+              className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
+            >
               <h1
                 className="hidden text-white group-hover:block absolute top-8"
                 id="hide"
-                onClick={(event) => handleUpdate(title15)}
               >
                 Croatian First League
               </h1>
@@ -319,7 +347,7 @@ const Leagues = ({ handleUpdate, data }) => {
                 onClick={(event) => handleUpdate(title15)}
                 className="w-[80%]"
               ></img>
-            </li>
+            </div>
           </Link>
         </motion.ul>
       </div>

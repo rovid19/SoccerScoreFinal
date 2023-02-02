@@ -5,7 +5,7 @@ import "boxicons";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-const Navbar = () => {
+const Navbar = ({}) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false);
   const [url, setUrl] = useState(window.location.href);

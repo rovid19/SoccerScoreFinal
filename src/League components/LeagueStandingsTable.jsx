@@ -47,7 +47,7 @@ const Lastmatcheng = ({ apiTitle, title, visible }) => {
           {visibility && (
             <TeamProfileInTable
               handleTeams={handleTeams}
-              title={title}
+              title={apiTitle}
               team={team}
             />
           )}
@@ -81,7 +81,8 @@ const Lastmatcheng = ({ apiTitle, title, visible }) => {
               </div>
               <div className="h-[80%] w-full  flex-row ">
                 {vals.map((item, index) => {
-                  /*  let className =
+                  /*
+                   let className =
                  
                 if (index >= vals.length - 4) {
                   className += " bg-red bg-opacity-";

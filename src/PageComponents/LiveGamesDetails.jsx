@@ -11,7 +11,7 @@ const LiveGamesDetails = ({ openClose, data, name, object }) => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
-        className="w-[80%] h-[70%] relative bg-white border-8 border-black-400 lg:w-[50%]"
+        className="w-[80%] h-[70%] relative bg-white border-8 border-black-400 lg:w-[50%] z-40"
       >
         <button
           onClick={openClose}

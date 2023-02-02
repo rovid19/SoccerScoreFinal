@@ -10,8 +10,7 @@ const MainLeagueComponent = ({ apiTitle }) => {
   const styles = {
     backgroundImage: `url(${image})`,
   };
-  console.log(apiTitle);
-  const title = "premierleague";
+
   const handleVisible = () => setVisible(!visible);
   return (
     <div className="absolute top-[80px] h-[calc(screen-80px)]  w-screen lg:h-screen lg:top-0">
@@ -38,7 +37,6 @@ const MainLeagueComponent = ({ apiTitle }) => {
               {" "}
               <LeagueStandingsTable
                 apiTitle={apiTitle}
-                title={title}
                 visible={visible}
               />{" "}
             </div>

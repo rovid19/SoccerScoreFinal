@@ -7,16 +7,56 @@ import Leagues from "./Pages/Leagues";
 import Transfers from "./Pages/Transfers";
 import MainLeagueComponent from "./League components/MainLeagueComponent";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const App = () => {
   const [data, setData] = useState("");
+  const [visible, setVisible] = useState(false);
   const handleUpdate = (updatedData) => {
     setData(updatedData);
   };
-  console.log(data);
+
+  const [classNameDva, setClassNameDva] = useState(
+    "w-[80%] h-[40%] bg-yellow text-black akita text-center lg:w-[50%]"
+  );
+  const [className, setClassName] = useState(
+    "h-[100%] w-[100%] absolute top-0 left-0 bg-black z-40 bg-opacity-50 flex justify-center items-center"
+  );
+
   return (
     <>
       <div className="flex">
+        <div
+          className={className}
+          onClick={() => {
+            setClassName("hidden");
+            setClassNameDva("hidden");
+          }}
+        >
+          <motion.div
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className={classNameDva}
+            onClick={() => {
+              setClassName("hidden");
+              setClassNameDva("hidden");
+            }}
+          >
+            <h1 className="w-[90%] text-xl">
+              Dear current user, due to this site using free API which has a
+              limit of 50 API calls per day, please don't scroll through all
+              leagues. Opening 1 league will trigger 4 API calls and if you go
+              through them all, next user won't have a pleasant experience.
+              Thanks! Ps. All leagues have same format so you're not missing out
+              on anything :D{" "}
+            </h1>
+
+            <h1 className="mt-10">
+              Press anywhere on page to close this window!
+            </h1>
+          </motion.div>
+        </div>
         <Navbar />
         <Routes>
           <Route exact path="/teams" element={<Teams />}></Route>
