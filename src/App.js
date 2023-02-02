@@ -11,13 +11,16 @@ import { motion } from "framer-motion";
 
 const App = () => {
   const [data, setData] = useState("");
-  const [visible, setVisible] = useState(false);
+  const [title, setTitle] = useState("");
   const handleUpdate = (updatedData) => {
     setData(updatedData);
   };
+  const handleTitle = (updatedData) => {
+    setTitle(updatedData);
+  };
 
   const [classNameDva, setClassNameDva] = useState(
-    "w-[80%] h-[40%] bg-yellow text-black akita text-center lg:w-[50%]"
+    "w-[80%] h-[60%] bg-yellow text-black akita text-center lg:w-[50%] lg:h-[40%]"
   );
   const [className, setClassName] = useState(
     "h-[100%] w-[100%] absolute top-0 left-0 bg-black z-40 bg-opacity-50 flex justify-center items-center"
@@ -64,84 +67,90 @@ const App = () => {
           <Route
             exact
             path="/"
-            element={<Leagues data={data} handleUpdate={handleUpdate} />}
+            element={
+              <Leagues
+                data={data}
+                handleUpdate={handleUpdate}
+                handleTitle={handleTitle}
+              />
+            }
           ></Route>
 
           <Route exact path="/livegames" element={<Livegames />}></Route>
           <Route
             exact
             path="/leagues/premier"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/laliga"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/bundesliga"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/seriea"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/ligue1"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/russianpremier"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/primeira"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/eredivisie"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/jupilerproleague"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/brasileirao"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/mls"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/ligamx"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/spfl"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/secondbundesliga"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
           <Route
             exact
             path="/leagues/prvaliga"
-            element={<MainLeagueComponent apiTitle={data} />}
+            element={<MainLeagueComponent apiTitle={data} title={title} />}
           ></Route>
         </Routes>
       </div>

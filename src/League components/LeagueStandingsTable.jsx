@@ -52,7 +52,7 @@ const Lastmatcheng = ({ apiTitle, title, visible }) => {
             />
           )}
           <div className="w-full h-[12%] flex justify-center items-center  bg-yellow">
-            <h1 className="text-black text-2xl ">Premier League 2022/2023</h1>
+            <h1 className="text-black text-2xl ">{title} 2022/2023</h1>
           </div>
           {data.length > 1 ? (
             ""
@@ -88,8 +88,8 @@ const Lastmatcheng = ({ apiTitle, title, visible }) => {
                   className += " bg-red bg-opacity-";
                 } else if (index <= vals.length - 17) {
                   className += "bg-yellow text-black";
-                } 
-*/
+                } */
+
                   return (
                     <div
                       onClick={(event) => {

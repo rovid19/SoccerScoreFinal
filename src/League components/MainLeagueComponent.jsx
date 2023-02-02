@@ -4,7 +4,7 @@ import NextMatchTable from "./NextMatchTable";
 import LeagueStandingsTable from "./LeagueStandingsTable";
 import { useState } from "react";
 
-const MainLeagueComponent = ({ apiTitle }) => {
+const MainLeagueComponent = ({ apiTitle, title }) => {
   const [visible, setVisible] = useState(false);
   const image = require(`../slike/${apiTitle}.jpg`);
   const styles = {
@@ -27,17 +27,23 @@ const MainLeagueComponent = ({ apiTitle }) => {
                 apiTitle={apiTitle}
                 visibleData={visible}
                 handleVisible={handleVisible}
+                title={title}
               />{" "}
             </div>
             <div>
               {" "}
-              <NextMatchTable apiTitle={apiTitle} visible={visible} />{" "}
+              <NextMatchTable
+                apiTitle={apiTitle}
+                visible={visible}
+                title={title}
+              />{" "}
             </div>
             <div className="">
               {" "}
               <LeagueStandingsTable
                 apiTitle={apiTitle}
                 visible={visible}
+                title={title}
               />{" "}
             </div>
           </div>

@@ -19,7 +19,7 @@ import Img15 from "../slike/franc.png";
 import Premierleague from "../League components/MainLeagueComponent";
 import img from "../slike/leagues.jpg";
 import { motion } from "framer-motion";
-const Leagues = ({ handleUpdate, data }) => {
+const Leagues = ({ handleUpdate, handleTitle }) => {
   const styles = {
     backgroundImage: `url(${img})`,
   };
@@ -40,6 +40,22 @@ const Leagues = ({ handleUpdate, data }) => {
   const title13 = "scottishleagueone";
   const title14 = "2.bundesliga";
   const title15 = "1.hnl";
+
+  const itle1 = "Premier League";
+  const itle2 = "LaLiga";
+  const itle3 = "Austrian Bundesliga";
+  const itle4 = "Serie A";
+  const itle5 = "Ligue 1";
+  const itle6 = "Russian Premier League";
+  const itle7 = "Primeira League";
+  const itle8 = "Eredivisie";
+  const itle9 = "Jupiler Pro League";
+  const itle10 = "Brasileirão Série A";
+  const itle11 = "majorleaguesoccer";
+  const itle12 = "kleague1";
+  const itle13 = "SPFL";
+  const itle14 = "2.Bundesliga";
+  const itle15 = "1.Hnl";
   /*const handleClick = () => {
     handleUpdate(event.target.textContent);
   }; */
@@ -79,7 +95,10 @@ const Leagues = ({ handleUpdate, data }) => {
         >
           <Link to="/leagues/premier">
             <div
-              onClick={(event) => handleUpdate(title1)}
+              onClick={(event) => {
+                handleUpdate(title1);
+                handleTitle(itle1);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -90,14 +109,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img1}
-                onClick={() => handleUpdate(title1)}
+                onClick={() => {
+                  handleUpdate(title1);
+                  handleTitle(itle1);
+                }}
                 className="w-[80%] group"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/laliga">
             <div
-              onClick={(event) => handleUpdate(title2)}
+              onClick={(event) => {
+                handleUpdate(title2);
+                handleTitle(itle2);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -108,14 +133,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img2}
-                onClick={(event) => handleUpdate(title2)}
+                onClick={(event) => {
+                  handleUpdate(title2);
+                  handleTitle(itle2);
+                }}
                 className="w-[80%] group"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/bundesliga">
             <div
-              onClick={(event) => handleUpdate(title3)}
+              onClick={(event) => {
+                handleUpdate(title3);
+                handleTitle(itle3);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -126,14 +157,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img14}
-                onClick={(event) => handleUpdate(title3)}
+                onClick={(event) => {
+                  handleUpdate(title3);
+                  handleTitle(itle3);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/seriea">
             <div
-              onClick={(event) => handleUpdate(title4)}
+              onClick={(event) => {
+                handleUpdate(title4);
+                handleTitle(itle4);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -144,14 +181,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img4}
-                onClick={(event) => handleUpdate(title4)}
+                onClick={(event) => {
+                  handleUpdate(title4);
+                  handleTitle(itle4);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/ligue1">
             <div
-              onClick={(event) => handleUpdate(title5)}
+              onClick={(event) => {
+                handleUpdate(title5);
+                handleTitle(itle5);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -162,7 +205,10 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img15}
-                onClick={(event) => handleUpdate(title5)}
+                onClick={(event) => {
+                  handleUpdate(title5);
+                  handleTitle(itle5);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
@@ -170,7 +216,10 @@ const Leagues = ({ handleUpdate, data }) => {
 
           <Link to="/leagues/russianpremier">
             <div
-              onClick={(event) => handleUpdate(title6)}
+              onClick={(event) => {
+                handleUpdate(title6);
+                handleTitle(itle6);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -181,14 +230,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img6}
-                onClick={(event) => handleUpdate(title6)}
+                onClick={(event) => {
+                  handleUpdate(title6);
+                  handleTitle(itle6);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/primeira">
             <div
-              onClick={(event) => handleUpdate(title7)}
+              onClick={(event) => {
+                handleUpdate(title7);
+                handleTitle(itle7);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -199,14 +254,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img7}
-                onClick={(event) => handleUpdate(title7)}
+                onClick={(event) => {
+                  handleUpdate(title7);
+                  handleTitle(itle7);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/eredivisie">
             <div
-              onClick={(event) => handleUpdate(title8)}
+              onClick={(event) => {
+                handleUpdate(title8);
+                handleTitle(itle8);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -217,14 +278,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img8}
-                onClick={(event) => handleUpdate(title8)}
+                onClick={(event) => {
+                  handleUpdate(title8);
+                  handleTitle(itle8);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/jupilerproleague">
             <div
-              onClick={(event) => handleUpdate(title9)}
+              onClick={(event) => {
+                handleUpdate(title9);
+                handleTitle(itle9);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -235,14 +302,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img9}
-                onClick={(event) => handleUpdate(title9)}
+                onClick={(event) => {
+                  handleUpdate(title9);
+                  handleTitle(itle9);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/brasileirao">
             <div
-              onClick={(event) => handleUpdate(title10)}
+              onClick={(event) => {
+                handleUpdate(title10);
+                handleTitle(itle10);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -253,7 +326,10 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img10}
-                onClick={(event) => handleUpdate(title10)}
+                onClick={(event) => {
+                  handleUpdate(title10);
+                  handleTitle(itle10);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
@@ -261,7 +337,10 @@ const Leagues = ({ handleUpdate, data }) => {
 
           <Link to="/">
             <div
-              onClick={(event) => handleUpdate(title11)}
+              onClick={(event) => {
+                handleUpdate(title11);
+                handleTitle(itle11);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -272,14 +351,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img11}
-                onClick={(event) => handleUpdate(title11)}
+                onClick={(event) => {
+                  handleUpdate(title11);
+                  handleTitle(itle11);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/">
             <div
-              onClick={(event) => handleUpdate(title12)}
+              onClick={(event) => {
+                handleUpdate(title12);
+                handleTitle(itle12);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -290,14 +375,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img12}
-                onClick={(event) => handleUpdate(title12)}
+                onClick={(event) => {
+                  handleUpdate(title12);
+                  handleTitle(itle12);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/spfl">
             <div
-              onClick={(event) => handleUpdate(title13)}
+              onClick={(event) => {
+                handleUpdate(title13);
+                handleTitle(itle13);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -308,14 +399,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img13}
-                onClick={(event) => handleUpdate(title13)}
+                onClick={(event) => {
+                  handleUpdate(title13);
+                  handleTitle(itle13);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/secondbundesliga">
             <div
-              onClick={(event) => handleUpdate(title14)}
+              onClick={(event) => {
+                handleUpdate(title14);
+                handleTitle(itle14);
+              }}
               className=" group shadow-xl  h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -326,14 +423,20 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img3}
-                onClick={(event) => handleUpdate(title14)}
+                onClick={(event) => {
+                  handleUpdate(title14);
+                  handleTitle(itle14);
+                }}
                 className="w-[80%]"
               ></img>
             </div>
           </Link>
           <Link to="/leagues/prvaliga">
             <div
-              onClick={(event) => handleUpdate(title15)}
+              onClick={(event) => {
+                handleUpdate(title15);
+                handleTitle(itle15);
+              }}
               className=" group shadow-xl h-[100%] relative flex justify-center items-center transition-all hover:bg-yellow hover:bg-opacity-80 cursor-pointer"
             >
               <h1
@@ -344,7 +447,10 @@ const Leagues = ({ handleUpdate, data }) => {
               </h1>
               <img
                 src={Img5}
-                onClick={(event) => handleUpdate(title15)}
+                onClick={(event) => {
+                  handleUpdate(title15);
+                  handleTitle(itle15);
+                }}
                 className="w-[80%]"
               ></img>
             </div>

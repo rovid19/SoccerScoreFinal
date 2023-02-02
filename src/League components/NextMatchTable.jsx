@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { options } from "../options";
 import { motion } from "framer-motion";
 
-const Lastmatcheng = ({ apiTitle, visible }) => {
+const Lastmatcheng = ({ apiTitle, visible, title }) => {
   const [data, setData] = useState([]);
   const loadApi = async () => {
     const response = await fetch(
@@ -43,7 +43,7 @@ const Lastmatcheng = ({ apiTitle, visible }) => {
           className="h-screen w-screen absolute top-[1670px] left-0 lg:left-[41.5%] xl:left-[46.3%] 2xl:w-[500px] 2xl:h-[550px] lg:top-[350px] lg:shadow-xl lg:bg-white lg:h-[500px] lg:w-[300px] 3xl:h-[650px] 3xl:w-[600px] 4xl:top-[400px] "
         >
           <div className="w-full h-[10%] flex justify-center text-black items-center bg-yellow">
-            <h1>Next Premier League Matches</h1>
+            <h1>Next {title} Matches</h1>
           </div>
 
           {data.length > 1 ? (

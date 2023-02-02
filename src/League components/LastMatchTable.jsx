@@ -4,7 +4,7 @@ import { options, optionsHighlights } from "../options";
 import HighlightPopup from "./HighlightPopup";
 import { motion } from "framer-motion";
 
-const LastMatchTable = ({ apiTitle, visibleData, handleVisible }) => {
+const LastMatchTable = ({ apiTitle, visibleData, handleVisible, title }) => {
   const [data, setData] = useState([]);
   const [highlightTitle, setHighlightTitle] = useState("");
 
@@ -53,8 +53,10 @@ const LastMatchTable = ({ apiTitle, visibleData, handleVisible }) => {
 
       <div className="w-full h-[10%] flex justify-center text-black items-center bg-yellow">
         <div className="centarTri">
-          <h1>Lastest Premier League Matches</h1>
-          <h1 className="text-sm">*CLICK ON MATCH TO SHOW HIGHLIGHTS*</h1>
+          <h1>Lastest {title} Matches</h1>
+          <h1 className="text-[10px] mt-2 bg-black text-white lg:text-14px lg:mt-0 lg:bg-transparent lg:text-black">
+            CLICK ON MATCH TO SHOW HIGHLIGHTS
+          </h1>
         </div>
       </div>
       {data.length > 1 ? (
