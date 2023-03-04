@@ -28,7 +28,7 @@ const Transfercard = ({ league, openModal }) => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
-        className="w-[300px] z-10 h-[600px] bg-white mt-14 border-4 shadow-2xl  border-grey sm:w-[500px] sm:h-[700px] sm:mt-20 lg:mt-0 2xl:w-[650px] 2xl:h-[750px]"
+        className="w-[300px] z-10 h-[600px] bg-white mt-14 border-4 shadow-2xl  border-grey sm:w-[500px] sm:h-[700px] sm:mt-20 lg:mt-0 2xl:w-[650px] 2xl:h-[750px] overflow-hidden"
       >
         {" "}
         <button

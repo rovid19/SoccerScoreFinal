@@ -16,7 +16,9 @@ const TeamProfileInTable = ({ handleTeams, title, team }) => {
   };
 
   useEffect(() => {
-    fetchApi();
+    if (data.length === 0) {
+      fetchApi();
+    }
   }, []);
   console.log(title, team);
 
